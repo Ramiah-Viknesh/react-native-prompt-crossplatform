@@ -5,6 +5,11 @@
 
 ```
 $ npm install react-native-prompt-crossplatform --save
+
+or
+
+$ yarn add react-native-prompt-crossplatform 
+
 ```
 
 ## Demo
@@ -63,10 +68,9 @@ import Prompt from 'react-native-prompt';
  inputStyle            | style Object to for the prompt-input-field  | Object | -
  btnStyle              | style Object to for the prompt-buttons      | Object | -
  btnTextStyle          | style Object to for the prompt-button-text  | Object | -
- 
+
  ## Copyright and License
 
  MIT License
 
 Copyright 2018 Ramiah Viknesh. All rights reserved.
-
