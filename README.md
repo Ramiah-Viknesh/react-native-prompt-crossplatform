@@ -21,7 +21,7 @@ $ yarn add react-native-prompt-crossplatform
 ## Basic Usage
 
 ```js
-import Prompt from 'react-native-prompt';
+import Prompt from 'react-native-prompt-crossplatform';
 
  // Inside render()
 
