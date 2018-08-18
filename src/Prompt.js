@@ -107,7 +107,7 @@ Prompt.defaultProps = {
   inputStyle: {},
   btnStyle: {},
   btnTextStyle: {},
-  onBackButtonPress: null,
+  onBackButtonPress: () => {},
 };
 
 export default Prompt;
