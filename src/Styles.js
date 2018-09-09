@@ -50,10 +50,11 @@ export default StyleSheet.create({
   btnContainer: {
     flexDirection: 'row',
     width: '100%',
+    justifyContent:'space-between',
     marginTop: 10,
   },
   promptBtn: {
-    width: '50%',
+    width: '33%',
     minHeight: 50,
     alignItems: 'center',
     justifyContent: 'center',

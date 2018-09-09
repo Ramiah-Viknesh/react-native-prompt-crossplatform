@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { Modal, View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './Styles';
@@ -12,6 +12,8 @@ const Prompt = ({
   submitButtonText,
   onCancel,
   cancelButtonText,
+  onDelete,
+  deleteButtonText,
   errorText,
   isVisible,
   onBackButtonPress,
@@ -58,6 +60,21 @@ const Prompt = ({
               {cancelButtonText}
             </Text>
           </TouchableOpacity>
+          {
+            (() => {
+              if (onDelete !== undefined)
+              return (
+            <TouchableOpacity
+            style={[styles.promptBtn, btnStyle]}
+            onPress={onDelete}
+          >
+            <Text
+              style={[{ color: "#ff0000" }, styles.btnTxt, btnTextStyle]}
+            >
+              {deleteButtonText}
+            </Text>
+          </TouchableOpacity>
+        );})()}
           <TouchableOpacity
             style={[styles.promptBtn, btnStyle]}
             onPress={onSubmit}
@@ -68,6 +85,7 @@ const Prompt = ({
               {submitButtonText}
             </Text>
           </TouchableOpacity>
+
         </View>
       </View>
     </View>
@@ -78,12 +96,14 @@ Prompt.propTypes = {
   isVisible: PropTypes.bool.isRequired,
   onSubmit: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
+  onDelete: PropTypes.func,
   onChangeText: PropTypes.func.isRequired,
   defaultValue: PropTypes.string,
   title: PropTypes.string.isRequired,
   inputPlaceholder: PropTypes.string.isRequired,
   submitButtonText: PropTypes.string,
   cancelButtonText: PropTypes.string,
+  deleteButtonText: PropTypes.string,
   errorText: PropTypes.string,
   onBackButtonPress: PropTypes.func,
   primaryColor: PropTypes.string,
@@ -98,6 +118,7 @@ Prompt.propTypes = {
 Prompt.defaultProps = {
   submitButtonText: 'submit',
   cancelButtonText: 'cancel',
+  deleteButtonText: 'delete',
   defaultValue: '',
   errorText: '',
   primaryColor: '#f13a59',
@@ -108,6 +129,7 @@ Prompt.defaultProps = {
   btnStyle: {},
   btnTextStyle: {},
   onBackButtonPress: () => {},
+  onDelete: undefined,
 };
 
 export default Prompt;

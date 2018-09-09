@@ -58,8 +58,10 @@ import Prompt from 'react-native-prompt-crossplatform';
  onChangeText          | Function to be called when a text is changed| Function | -
  submitButtonText      | Text for the Submit Button                  | String   | submit
  cancelButtonText      | Text for the cancel Button                  | String   | cancel
+ deleteButtonText      | Text for the delete Button                  | String   | delete
  onSubmit              | Function to be called when the Submit button is pressed | Function | -
  onCancel              | Function to be called when the Cancel button is pressed | Function | -
+ onDelete              | Function to be called when the Delete button is pressed | Function | -
  errorText             | Any Error messages to be shown              | String   | -
  onBackButtonPress     | Function to be called when the Back button is pressed (Android Only) |Function | -
  primaryColor          | primary Theme colour                        | String   | #f13a59
