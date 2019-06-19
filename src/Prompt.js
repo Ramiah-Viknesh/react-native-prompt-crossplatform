@@ -22,6 +22,7 @@ const Prompt = ({
   inputStyle,
   btnStyle,
   btnTextStyle,
+  keyboardType,
   promptAnimation,
   ...inputProps
 }) => (
@@ -93,6 +94,7 @@ Prompt.propTypes = {
   btnStyle: PropTypes.object,
   btnTextStyle: PropTypes.object,
   promptAnimation: PropTypes.string,
+  keyboardType: PropTypes.string
 };
 
 Prompt.defaultProps = {
