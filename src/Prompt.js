@@ -38,6 +38,7 @@ const Prompt = ({
       <View style={[styles.promptBox, promptBoxStyle]}>
         <Text style={[styles.heading, headingStyle]} ellipsizeMode="tail" numberOfLines={1}>{title}</Text>
         <TextInput
+          keyboardType={keyboardType}
           placeholder={inputPlaceholder}
           defaultValue={defaultValue}
           underlineColorAndroid={primaryColor}
